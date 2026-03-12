@@ -3,7 +3,7 @@ cask "odoo-work-cli" do
   name "odoo-work-cli"
   desc "CLI tool for managing Odoo 17 timesheets"
   homepage "https://github.com/seletz/odoo-work-cli"
-  version "0.3.0"
+  version "0.4.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "odoo-work-cli" do
   on_macos do
     on_intel do
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-darwin-amd64.tar.gz"
-      sha256 "e4ac3581a16ff7698f91682ab53cbdbaae0d7fe3e327ff2f8af738b81480900b"
+      sha256 "70bf52e696876d4215b9cfdb4c68451dcddbb679d86c1634bb2c0364a7c80808"
     end
     on_arm do
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-darwin-arm64.tar.gz"
-      sha256 "35001ed91888b8d8b095f188af24fec97ecd1c8d0025eb5ca6e26a4909afb240"
+      sha256 "4315a063f7ef14b85b544fdce1cf5fa6a7cde7dc351fa5082df3ed114e66f38f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-linux-amd64.tar.gz"
-      sha256 "868e0ab46a6520f6e549d01c3e0b5dfdb38f160a4a4c3b5371edf5e9f5b1ed91"
+      sha256 "c8b2c92f5c587cf93597d1cd9510924eccfe26289a803f01d4737ea484b7b13b"
     end
     on_arm do
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-linux-arm64.tar.gz"
-      sha256 "436a2996cb1b1a628480626f6ecd528b53904d990cb6b4105ce681c99853d9f2"
+      sha256 "fbe1e1ff4e9f465440556dcfb61748e4285893b2a106b4560372525f9355906c"
     end
   end
 
