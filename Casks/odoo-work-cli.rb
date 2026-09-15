@@ -37,9 +37,9 @@ cask "odoo-work-cli" do
   fish_completion "completions/odoo-work-cli.fish"
   zsh_completion "completions/_odoo-work-cli"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/odoo-work-cli"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/odoo-work-cli"]
     end
   end
 
