@@ -25,7 +25,7 @@ brew install seletz/tap/odoo-work-cli
 
 | Formula | Description                                                                 |
 | ------- | --------------------------------------------------------------------------- |
-| `yabai` | [yabai](https://github.com/asmvik/yabai) 7.1.25 built from source with the macOS 27 version-clamp patch; use the fully-qualified name `seletz/tap/yabai` because upstream taps ship the same name |
+| `yabai` | [seletz/yabai](https://github.com/seletz/yabai) soft fork (upstream 7.1.25 + macOS 27 version-clamp patch), built from source; use the fully-qualified name `seletz/tap/yabai` because upstream taps ship the same name |
 
 ```bash
 brew install seletz/tap/yabai

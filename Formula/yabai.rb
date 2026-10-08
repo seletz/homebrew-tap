@@ -1,26 +1,23 @@
-# Upstream yabai (asmvik/formulae) plus one patch: treat a macOS release newer
-# than the newest one yabai knows (26) like that newest one. Without it every
-# macOS-version check is false on macOS 27 and window management falls back to
-# pre-Ventura code paths (e.g. no bsp re-layout after closing a window, see
-# asmvik/yabai#2828). Drop this formula once upstream ships the fix.
+# yabai built from the seletz/yabai soft fork: upstream v7.1.25 plus a version
+# clamp so that a macOS release newer than the newest one yabai knows (26)
+# takes that release's code paths. Without it every macOS-version check is
+# false on macOS 27 and window management falls back to pre-Ventura code
+# paths (e.g. no bsp re-layout after closing a window, asmvik/yabai#2828).
+# Upstream releases ship a prebuilt binary only, so the patched build comes
+# from source. Fork branch: https://github.com/seletz/yabai/tree/seletz
 class Yabai < Formula
   desc "Tiling window manager for macOS (bsp), with the macOS 27 version-clamp patch"
-  homepage "https://github.com/asmvik/yabai"
-  url "https://github.com/asmvik/yabai/archive/refs/tags/v7.1.25.tar.gz"
-  sha256 "f60f503b24896dcb4babc034b2f85494e4be2cab6e0d41575a2f03e767403602"
+  homepage "https://github.com/seletz/yabai"
+  url "https://github.com/seletz/yabai/archive/refs/tags/v7.1.25-seletz.1.tar.gz"
+  version "7.1.25"
+  sha256 "e0802bfb36d0f5a8d94765661e95259f301a664bc290795d5c423d7a779fe030"
   license "MIT"
   revision 1
-  head "https://github.com/asmvik/yabai.git", branch: "master"
+  head "https://github.com/seletz/yabai.git", branch: "seletz"
 
   depends_on :macos
 
   conflicts_with "koekeishiya/formulae/yabai", because: "both install bin/yabai"
-
-  # https://github.com/idvorkin/yabai/compare/master...upstream-pr/newer-macos-clamp
-  patch do
-    url "https://github.com/idvorkin/yabai/commit/537b17c.patch?full_index=1"
-    sha256 "d582b9d7d71c9c6f68b29fef445ac2299b2d2f911f9b65d8718f09e5d3c4d0f5"
-  end
 
   def install
     system "make", "-j1", "install"
@@ -32,8 +29,9 @@ class Yabai < Formula
 
   def caveats
     <<~EOS
-      Patched build for macOS 27 (version clamp). After every (re)build macOS
-      asks for Accessibility again, then: yabai --restart-service
+      Built from source (seletz/yabai, upstream v7.1.25 + macOS 27 clamp).
+      After every (re)build macOS asks for Accessibility again, then:
+        yabai --restart-service
       Logs: /tmp/yabai_<user>.[out|err].log
     EOS
   end
