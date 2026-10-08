@@ -5,6 +5,11 @@
 # paths (e.g. no bsp re-layout after closing a window, asmvik/yabai#2828).
 # Upstream releases ship a prebuilt binary only, so the patched build comes
 # from source. Fork branch: https://github.com/seletz/yabai/tree/seletz
+#
+# No conflicts_with against the upstream taps on purpose: Homebrew 7 would
+# have to load that formula and refuses when its tap is untrusted, which
+# broke `brew info seletz/tap/yabai`. The bin/yabai link conflict is
+# reported at install time anyway — uninstall the upstream yabai first.
 class Yabai < Formula
   desc "Tiling window manager for macOS (bsp), with the macOS 27 version-clamp patch"
   homepage "https://github.com/seletz/yabai"
@@ -16,8 +21,6 @@ class Yabai < Formula
   head "https://github.com/seletz/yabai.git", branch: "seletz"
 
   depends_on :macos
-
-  conflicts_with "koekeishiya/formulae/yabai", because: "both install bin/yabai"
 
   def install
     system "make", "-j1", "install"
