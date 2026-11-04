@@ -6,25 +6,25 @@ cask "total-recall" do
     end
   end
 
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
     on_arm do
-      sha256 "9cfc76c142b62d291dc74a25d458963d5c43d6391ab0796804e63965b55fef59"
+      sha256 "babd993ddbe3557d463fb2c08553960f201576a849dbb7f824f5ddd022fc6fd6"
       url "https://github.com/seletz/total-recall/releases/download/v#{version}/total-recall-v#{version}-darwin-arm64.tar.gz"
     end
     on_intel do
-      sha256 "322fdd6efe63440ddf0d06949bfd8be06a08a65fb5c4bc2625c15916a701d3fe"
+      sha256 "4bb7e19991989e027a8c867985bf00fc5c99b8b91f608f9a4025b78af405fff9"
       url "https://github.com/seletz/total-recall/releases/download/v#{version}/total-recall-v#{version}-darwin-amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "0d242cdba80c370807f5dd7f7dc9986b44cd9f9866a3c9174878625251988270"
+      sha256 "15c7de0c5755750d759468c59519dadd94c0a8813c2d74fc1dba344376199552"
       url "https://github.com/seletz/total-recall/releases/download/v#{version}/total-recall-v#{version}-linux-arm64.tar.gz"
     end
     on_intel do
-      sha256 "3b6b5829b92a66793bd99bf314e61865945347179dbda42fa80e35fadd815c60"
+      sha256 "541630eeae77377b0295cc9280ae536e177cac634144e23605e41092ecb1e628"
       url "https://github.com/seletz/total-recall/releases/download/v#{version}/total-recall-v#{version}-linux-amd64.tar.gz"
     end
   end
