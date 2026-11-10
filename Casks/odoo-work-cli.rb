@@ -6,25 +6,25 @@ cask "odoo-work-cli" do
     end
   end
 
-  version "0.8.3"
+  version "0.8.4"
 
   on_macos do
     on_arm do
-      sha256 "1a8796671d889e125f4154360b09fa42d04de38416a83eb1cf692f5a0ad3228d"
+      sha256 "7a532d76f777b813640b7c76c4fa0bf21dd15e495a64d3435293d86bf4ebf235"
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-darwin-arm64.tar.gz"
     end
     on_intel do
-      sha256 "612595bbe629d4ec4da07a7eb34088ff670a8b3e15687cb9045273e023739ca5"
+      sha256 "56aa3c434b94860888f34e01d93fb8f0eff2ba7c627aa6b45fb7b4711c2c2e09"
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-darwin-amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "ab2faaa4982c6e80e0b44d759c81f09e424851b2c65055912e034043e5fe3c49"
+      sha256 "5e22b51fad5979691ebd3f54e4c3cac205e9e18c6cb0809873e14f2d4c223e4d"
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-linux-arm64.tar.gz"
     end
     on_intel do
-      sha256 "a634028c2b53f28e2b0d2450794b25589f2f38c63dfec62b998988fb1b106654"
+      sha256 "8f402c6169a1e51c56ed35f5cdaaf552286cb8856093c4b7a950dc943249089a"
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-linux-amd64.tar.gz"
     end
   end
@@ -38,6 +38,28 @@ cask "odoo-work-cli" do
   end
 
   binary "odoo-work-cli"
+  manpage "man/man1/odoo-work-cli-clock-add.1"
+  manpage "man/man1/odoo-work-cli-clock-edit.1"
+  manpage "man/man1/odoo-work-cli-clock-in.1"
+  manpage "man/man1/odoo-work-cli-clock-list.1"
+  manpage "man/man1/odoo-work-cli-clock-out.1"
+  manpage "man/man1/odoo-work-cli-clock-status.1"
+  manpage "man/man1/odoo-work-cli-clock.1"
+  manpage "man/man1/odoo-work-cli-completion.1"
+  manpage "man/man1/odoo-work-cli-config-install.1"
+  manpage "man/man1/odoo-work-cli-config.1"
+  manpage "man/man1/odoo-work-cli-entries-add.1"
+  manpage "man/man1/odoo-work-cli-entries-delete.1"
+  manpage "man/man1/odoo-work-cli-entries-update.1"
+  manpage "man/man1/odoo-work-cli-entries.1"
+  manpage "man/man1/odoo-work-cli-fields.1"
+  manpage "man/man1/odoo-work-cli-llm.1"
+  manpage "man/man1/odoo-work-cli-projects.1"
+  manpage "man/man1/odoo-work-cli-tasks.1"
+  manpage "man/man1/odoo-work-cli-timesheets.1"
+  manpage "man/man1/odoo-work-cli-tui.1"
+  manpage "man/man1/odoo-work-cli-whoami.1"
+  manpage "man/man1/odoo-work-cli.1"
   bash_completion "completions/odoo-work-cli.bash"
   zsh_completion "completions/_odoo-work-cli"
   fish_completion "completions/odoo-work-cli.fish"
