@@ -6,25 +6,25 @@ cask "odoo-work-cli" do
     end
   end
 
-  version "0.8.4"
+  version "0.8.5"
 
   on_macos do
     on_arm do
-      sha256 "7a532d76f777b813640b7c76c4fa0bf21dd15e495a64d3435293d86bf4ebf235"
+      sha256 "a5940b13519752b84801e00431ff0e396d5ce34d3734427e900036367416a49a"
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-darwin-arm64.tar.gz"
     end
     on_intel do
-      sha256 "56aa3c434b94860888f34e01d93fb8f0eff2ba7c627aa6b45fb7b4711c2c2e09"
+      sha256 "3a750fe799e9146727b750d60b07d8d7fa3e504b8dd46faffafc0419b1f4e198"
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-darwin-amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "5e22b51fad5979691ebd3f54e4c3cac205e9e18c6cb0809873e14f2d4c223e4d"
+      sha256 "ec66f4009886b93c98e003c534474b669ff646556871154e0b6ce99c212df875"
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-linux-arm64.tar.gz"
     end
     on_intel do
-      sha256 "8f402c6169a1e51c56ed35f5cdaaf552286cb8856093c4b7a950dc943249089a"
+      sha256 "d2191c02f6afa3fed696c063597bfb8456359979c20f4d2017fcf9f08a2d63b1"
       url "https://github.com/seletz/odoo-work-cli/releases/download/v#{version}/odoo-work-cli-v#{version}-linux-amd64.tar.gz"
     end
   end
